@@ -113,9 +113,9 @@ $("body").terminal(
         <br>
         <span class="cmd">about</span> => my info
         <br>
-        <span class="cmd">go [name]</span> => use to open url (try:<span style="color:#63b5cf;" >go list</span>)
+        <span class="cmd">go list</span> => use to open url (try:<span style="color:#63b5cf;" >go list</span>)
         <br>
-        <span class="cmd">projects [name]</span> => use to open one of my projects (try:<span style="color:#63b5cf;">projects list</span>)
+        <span class="cmd">projects list</span> => use to open one of my projects (try:<span style="color:#63b5cf;">projects list</span>)
         <br>
         <span class="cmd">ping</span> => use to check your internet connection
         <br> 
@@ -225,9 +225,9 @@ $("body").terminal(
       if (web == "github") {
         const github = `https://github.com/cybersecurity-al`;
         go_url(github);
-      } else if (web == "reddit") {
-        const reddit = `https://www.reddit.com/user/imh4z3`;
-        go_url(reddit);
+      } else if (web == "discord") {
+        const discord = `https://discord.gg/k4studios`;
+        go_url(discord);
       } else if (web=="replit") {
         const replit = `https://replit.com/@iamh4z3`
         go_url(replit)
@@ -237,14 +237,16 @@ $("body").terminal(
         <span>
         <a href="https://github.com/cybersecurity-al" target="_blank" style="color:#ffbfbd;text-decoration:none">[Github]</a> : cybersecurity-al (<span style="color:#63b5cf;">go github</span>)
         <br>
-        <a href="https://www.reddit.com/user/imh4z3" target="_blank" style="color:#ffbfbd;text-decoration:none">[Reddit]</a> : ImH4z3 (<span style="color:#63b5cf;">go reddit</span>)
+        <a href="https://discord.gg/k4studios" target="_blank" style="color:#ffbfbd;text-decoration:none">[Discord]</a> : K4 STUDIOS (<span style="color:#63b5cf;">go discord</span>)
         <br>
         <a href="https://replit.com/@iamh4z3" target="_blank" style="color:#ffbfbd;text-decoration:none">[Replit]</a> : IamH4z3 (<span style="color:#63b5cf;">go replit</span>)
         <br>
-        `);
+        `)
+        ;
         const banner = `${color("maincolor", links_banner)}`;
         this.echo(banner);
         this.echo(list);
+        this.echo(color("red", "ATTENTION! To redirect to the url's in list, type go and name, example, go discord"));
       } else {
         this.echo(color("red", "err! try: go list"));
       }
@@ -272,6 +274,12 @@ $("body").terminal(
                   [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
                   [-u user] file ...`;
       this.echo(usage)
+    },
+    credits: function () {
+      const credits1 = `${color("maincolor", "Big shoutout to my talented friends at")} ${color("red", "K4 Studios")}${color("maincolor", ". Your creativity and passion have added a unique and magical touch to our journey. Thanks for the incredible moments and endless inspiration!")}
+      ${color("maincolor", "")}
+      `;
+      this.echo(credits1)
     },
     //ping
     ping: function () {
