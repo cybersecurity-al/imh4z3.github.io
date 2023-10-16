@@ -115,7 +115,7 @@ $("body").terminal(
         <br>
         <span class="cmd">go [name]</span> => use to open url (try:<span style="color:#63b5cf;" >go list</span>)
         <br>
-        <span class="cmd">projects [name]</span> => use to open one of my projects (try:<span style="color:#63b5cf;">project list</span>)
+        <span class="cmd">projects [name]</span> => use to open one of my projects (try:<span style="color:#63b5cf;">projects list</span>)
         <br>
         <span class="cmd">ping</span> => use to check your internet connection
         <br> 
